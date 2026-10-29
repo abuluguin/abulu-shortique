@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="ABULU Shortique duck icon">
+  <rect width="64" height="64" rx="16" fill="#0b0816"/>
+  <circle cx="32" cy="34" r="20" fill="#ffd23f"/>
+  <ellipse cx="21" cy="22" rx="3" ry="2" fill="#ffd23f" transform="rotate(-25 21 22)"/>
+  <circle cx="25" cy="30" r="4.2" fill="#fff"/><circle cx="26" cy="30.5" r="2.2" fill="#2a1a4a"/>
+  <circle cx="39" cy="30" r="4.2" fill="#fff"/><circle cx="40" cy="30.5" r="2.2" fill="#2a1a4a"/>
+  <path d="M20 40 Q32 34 44 40 Q42 49 32 49 Q22 49 20 40Z" fill="#ff9a1f"/>
+  <circle cx="17" cy="38" r="3.4" fill="#ff4fa3" opacity=".55"/><circle cx="47" cy="38" r="3.4" fill="#ff4fa3" opacity=".55"/>
+</svg>

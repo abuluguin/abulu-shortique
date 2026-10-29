@@ -1,0 +1,7 @@
+# ABULU Shortique - robots.txt
+# Everyone is welcome to visit and index the site.
+User-agent: *
+Allow: /
+
+# Replace YOUR-GITHUB-USERNAME with your GitHub username (see README)
+Sitemap: https://YOUR-GITHUB-USERNAME.github.io/abulu-shortique/sitemap.xml

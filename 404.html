@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Page not found | ABULU Shortique</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <style>
+    body{margin:0;min-height:100vh;display:grid;place-items:center;background:#0b0816;color:#f6f1ff;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;text-align:center;padding:24px}
+    h1{font-size:clamp(3rem,16vw,7rem);margin:0;color:#ffd23f;line-height:1}
+    p{color:#bcb1d6;font-size:1.1rem}
+    a{display:inline-block;margin-top:12px;padding:16px 28px;border-radius:999px;background:#5dff8f;color:#1a0f2e;font-weight:800;text-decoration:none}
+    .d{font-size:4rem}
+  </style>
+</head>
+<body>
+  <main>
+    <div class="d" aria-hidden="true">🦆</div>
+    <h1>404</h1>
+    <p>The duck ate this page. Sorry.</p>
+    <!-- "./" does not work on a 404 page, so this link uses the folder GitHub Pages is in -->
+    <a id="home" href="/">Back to ABULU Shortique</a>
+  </main>
+  <script>
+    // On GitHub Pages the site lives in /repository-name/, so build the home link from the address.
+    (function () {
+      var parts = location.pathname.split('/').filter(Boolean);
+      var host = location.hostname;
+      var base = (host.slice(-10) === '.github.io' && parts.length) ? '/' + parts[0] + '/' : '/';
+      document.getElementById('home').href = base;
+    })();
+  </script>
+</body>
+</html>
