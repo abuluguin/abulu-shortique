@@ -489,8 +489,8 @@
     var svg = svgEl('svg', { viewBox: '0 0 ' + W + ' ' + H, preserveAspectRatio: 'none', 'aria-hidden': 'true' });
     var defs = svgEl('defs');
     var grad = svgEl('linearGradient', { id: 'gArea', x1: 0, y1: 0, x2: 0, y2: 1 });
-    grad.appendChild(svgEl('stop', { offset: '0%', 'stop-color': '#ff4fa3', 'stop-opacity': '.38' }));
-    grad.appendChild(svgEl('stop', { offset: '100%', 'stop-color': '#ff4fa3', 'stop-opacity': '0' }));
+    grad.appendChild(svgEl('stop', { offset: '0%', 'stop-color': '#ff4b2b', 'stop-opacity': '.45' }));
+    grad.appendChild(svgEl('stop', { offset: '100%', 'stop-color': '#ffc91f', 'stop-opacity': '.1' }));
     defs.appendChild(grad); svg.appendChild(defs);
 
     // horizontal grid + y labels

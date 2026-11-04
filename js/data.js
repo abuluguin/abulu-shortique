@@ -347,6 +347,13 @@ var FAN_IDEAS = [
    7. RELEASES   (the "What's new" list - newest first)
    --------------------------------------------------------------------- */
 var RELEASES = [
+  { version: "3.0", date: "4 Nov 2026", title: "The cereal box redesign",
+    items: [
+      "Whole new look: milk-white and bright yellow, with cereal rings in the background",
+      "Chunky new buttons that actually press down",
+      "Channel Stats now comes with a Channel Facts label. Contains duck",
+      "Milestones are now prize tokens, and the next one will not stop wobbling"
+    ] },
   { version: "2.2", date: "30 Oct 2026", title: "Short #15: The Duck Became a CEO",
     items: ["Short #15 is up: The Duck Became a CEO. Sales: skyrocketing."] },
   { version: "2.1", date: "30 Oct 2026", title: "Short #14: The Ultimate Sandwich",

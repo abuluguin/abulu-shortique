@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="ABULU Shortique duck icon">
-  <rect width="64" height="64" rx="16" fill="#0b0816"/>
+  <rect width="64" height="64" rx="16" fill="#ff4b2b"/>
   <circle cx="32" cy="34" r="20" fill="#ffd23f"/>
   <ellipse cx="21" cy="22" rx="3" ry="2" fill="#ffd23f" transform="rotate(-25 21 22)"/>
   <circle cx="25" cy="30" r="4.2" fill="#fff"/><circle cx="26" cy="30.5" r="2.2" fill="#2a1a4a"/>
