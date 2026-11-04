@@ -173,6 +173,7 @@ h1, h2, h3, p { margin-top: 0; }
 .phone-cap small { color: var(--ink-2); font-weight: 700; }
 
 /* ---------- Ticker ---------- */
+main { overflow-x: clip; } /* keeps the tilted ticker from widening the page on phones */
 .ticker { position: relative; z-index: 2; overflow: hidden; background: var(--ink); width: 104%; margin: -14px -2% 0; rotate: -1deg; border-block: 4px solid var(--ink); }
 .ticker-track { display: flex; width: max-content; padding: 14px 0; animation: marquee 60s linear infinite; }
 .ticker:hover .ticker-track { animation-play-state: paused; }
@@ -370,6 +371,27 @@ h1, h2, h3, p { margin-top: 0; }
 .waddle span { display: inline-block; animation: waddle-r .5s ease-in-out infinite alternate; }
 @keyframes waddle-x { to { left: calc(100vw + 90px); } }
 @keyframes waddle-r { from { transform: rotate(-12deg) translateY(0); } to { transform: rotate(12deg) translateY(-8px); } }
+
+/* ---------- Intro video + box-flap opening ---------- */
+html.intro-open, html.intro-open body { overflow: hidden; }
+.intro { position: fixed; inset: 0; z-index: 300; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.intro[hidden] { display: none; }
+.intro-flap { position: absolute; top: 0; bottom: 0; width: 50.5%; transition: transform .75s cubic-bezier(.6, 0, .2, 1) .22s; }
+.intro-flap-l { left: 0; border-right: 6px solid transparent; background: repeating-conic-gradient(from 0deg at 100% 50%, var(--yolk) 0 9deg, var(--yolk-2) 9deg 18deg); }
+.intro-flap-r { right: 0; border-left: 6px solid transparent; background: repeating-conic-gradient(from 0deg at 0 50%, var(--yolk) 0 9deg, var(--yolk-2) 9deg 18deg); }
+.intro-video { position: relative; z-index: 1; width: 100%; height: 100%; object-fit: contain; transition: transform .28s var(--ease), opacity .24s; }
+.intro-btn { position: absolute; z-index: 2; top: calc(14px + env(safe-area-inset-top)); min-height: 44px; padding: 0 14px; border: var(--line); border-radius: 12px; background: var(--paper); color: var(--ink); box-shadow: 0 3px 0 var(--ink); font-weight: 800; font-size: .88rem; cursor: pointer; transition: transform .12s var(--ease), box-shadow .12s var(--ease), opacity .15s; }
+.intro-btn:hover { background: var(--yolk-2); }
+.intro-btn:active { transform: translateY(3px); box-shadow: 0 0 0 var(--ink); }
+.intro-skip { right: max(14px, env(safe-area-inset-right)); }
+.intro-sound { left: max(14px, env(safe-area-inset-left)); }
+.intro[hidden] .intro-btn[hidden], .intro-btn[hidden] { display: none; }
+.intro.opening .intro-video { transform: scale(.55) rotate(-5deg); opacity: 0; }
+.intro.opening .intro-btn { opacity: 0; pointer-events: none; }
+.intro.opening .intro-flap { border-color: var(--ink); }
+.intro.opening .intro-flap-l { transform: translateX(-103%); }
+.intro.opening .intro-flap-r { transform: translateX(103%); }
+.intro-replay { margin-left: auto; flex: none; }
 
 /* ---------- Tablets (700px and up) ---------- */
 @media (min-width: 700px) {

@@ -63,6 +63,23 @@
 </head>
 
 <body>
+  <!-- ===================== INTRO VIDEO (plays on every visit, see js/intro.js) ===================== -->
+  <div class="intro" id="intro" role="dialog" aria-modal="true" aria-label="ABULU Shortique intro video" hidden>
+    <div class="intro-flap intro-flap-l"></div>
+    <div class="intro-flap intro-flap-r"></div>
+    <video class="intro-video" id="introVideo" src="videos/intro.mp4" playsinline preload="auto"></video>
+    <button class="intro-btn intro-sound" id="introSound" type="button" hidden>🔊 Tap for sound</button>
+    <button class="intro-btn intro-skip" id="introSkip" type="button">Skip ▶▶</button>
+  </div>
+  <script>
+    /* Shown straight away so the website does not flash first. Stays hidden if
+       JavaScript is off, or for visitors who asked their device to reduce motion. */
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.getElementById('intro').hidden = false;
+      document.documentElement.classList.add('intro-open');
+    }
+  </script>
+
   <a class="skip" href="#main">Skip to content</a>
 
   <!-- ===================== HEADER / NAVIGATION ===================== -->
@@ -81,6 +98,8 @@
         <a href="#milestones">Milestones</a>
         <a href="#stats">Channel Stats</a>
       </nav>
+
+      <button class="btn btn-gold sm intro-replay" id="introReplay" type="button" aria-label="Watch the intro again">▶ Intro</button>
 
       <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
         <span></span><span></span><span></span>
@@ -269,5 +288,6 @@
   <!-- ============ SCRIPTS: data first, then the code that uses it ============ -->
   <script src="js/data.js"></script>
   <script src="js/app.js"></script>
+  <script src="js/intro.js"></script>
 </body>
 </html>
