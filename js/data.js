@@ -35,7 +35,7 @@ var SITE = {
   // Your public website address. After GitHub Pages is on, it looks like:
   //   https://YOUR-GITHUB-USERNAME.github.io/abulu-shortique/
   // (Also change it in index.html, robots.txt and sitemap.xml - see README.)
-  url: "https://YOUR-GITHUB-USERNAME.github.io/abulu-shortique/",
+  url: "https://abuluguin.github.io/abulu-shortique/",
 
   // Where visitors can follow you. Leave a link as "" to hide its button.
   links: {
@@ -78,7 +78,8 @@ var FOLLOWER_HISTORY = [
   { date: "2026-10-25T22:00:00+08:00", followers: 3 },
   { date: "2026-10-25T23:00:00+08:00", followers: 3 },
   { date: "2026-10-26T00:00:00+08:00", followers: 4 },
-  { date: "2026-10-26T01:00:00+08:00", followers: 6 }
+  { date: "2026-10-26T01:00:00+08:00", followers: 6 },
+  { date: "2026-11-04T17:34:00+08:00", followers: 7 }
 ];
 
 
@@ -237,6 +238,26 @@ var SHORTS = [
     watchUrl: "",
     views: null, date: "2026-10-29", duration: "0:50",
     tags: ["fan", "duck"], milestone: ""
+  },
+  {
+    id: "the-ultimate-sandwich",
+    title: "The Ultimate Sandwich",
+    description: "A legendary sandwich in a museum. A tomato on a mountain, lettuce in Greenland, cheese from scratch. Worth it?",
+    thumbnail: "images/thumbs/the-ultimate-sandwich.jpg",
+    video: "videos/the-ultimate-sandwich.mp4",
+    watchUrl: "",
+    views: null, date: "2026-10-30", duration: "0:50",
+    tags: ["fan", "duck"], milestone: ""
+  },
+  {
+    id: "the-duck-became-a-ceo",
+    title: "The Duck Became a CEO",
+    description: "A duck wanders into a pop-up store full of duck merch. Ten minutes later he is the CEO. Nobody questions it.",
+    thumbnail: "images/thumbs/the-duck-became-a-ceo.jpg",
+    video: "videos/the-duck-became-a-ceo.mp4",
+    watchUrl: "",
+    views: null, date: "2026-10-30", duration: "0:50",
+    tags: ["fan", "duck"], milestone: ""
   }
 ];
 
@@ -326,6 +347,10 @@ var FAN_IDEAS = [
    7. RELEASES   (the "What's new" list - newest first)
    --------------------------------------------------------------------- */
 var RELEASES = [
+  { version: "2.2", date: "30 Oct 2026", title: "Short #15: The Duck Became a CEO",
+    items: ["Short #15 is up: The Duck Became a CEO. Sales: skyrocketing."] },
+  { version: "2.1", date: "30 Oct 2026", title: "Short #14: The Ultimate Sandwich",
+    items: ["Short #14 is up: The Ultimate Sandwich. Hard work paid off."] },
   { version: "2.0", date: "29 Oct 2026", title: "The website goes public",
     items: [
       "Brand new design that works on phones, tablets and computers",
@@ -351,13 +376,17 @@ var RELEASES = [
    8. TICKER   (the scrolling headlines - add or remove any line)
    --------------------------------------------------------------------- */
 var TICKER = [
+  "Short #15: the duck is now CEO. Sales are skyrocketing",
+  "Short #15: he just wanted to go to a store",
+  "Short #14: the tomato climbed a mountain so the duck could judge it",
+  "Short #14: Fan crossed Greenland for lettuce. The duck held it happily",
   "Short #13: 1,987 bowls of cereal later, the car is still covered in soap",
   "Short #13: Fan does not even like cereal. He adopted the duck anyway",
   "Short #12: every dish on the menu was duck. Every single one",
   "Short #11: the model kit remains 0.1% finished",
   "Short #10: a duck got 1,000,000,000 likes and blinked once",
   "Short #9 also contains a duck. We still have no comment",
-  "Analysts call 6 followers 'a lot'",
+  "Analysts call 7 followers 'a lot'",
   "Next stop: 10 followers",
   "Fan ideas now accepted",
   "This ticker is not legally a news organization"

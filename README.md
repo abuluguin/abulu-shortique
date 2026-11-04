@@ -35,8 +35,8 @@ abulu-shortique/                 <- the repository (upload everything inside thi
 │   ├── icon-192.png             app icon
 │   ├── icon-512.png             app icon
 │   ├── apple-touch-icon.png     iPhone home-screen icon
-│   └── thumbs/                  one thumbnail per Short (13 files)
-└── videos/                      one MP4 per Short (13 files)
+│   └── thumbs/                  one thumbnail per Short (15 files)
+└── videos/                      one MP4 per Short (15 files)
 ```
 
 ---

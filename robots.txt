@@ -4,4 +4,4 @@ User-agent: *
 Allow: /
 
 # Replace YOUR-GITHUB-USERNAME with your GitHub username (see README)
-Sitemap: https://YOUR-GITHUB-USERNAME.github.io/abulu-shortique/sitemap.xml
+Sitemap: https://abuluguin.github.io/abulu-shortique/sitemap.xml
