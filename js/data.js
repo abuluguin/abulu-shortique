@@ -258,6 +258,16 @@ var SHORTS = [
     watchUrl: "",
     views: null, date: "2026-10-30", duration: "0:50",
     tags: ["fan", "duck"], milestone: ""
+  },
+  {
+    id: "the-stamp-book",
+    title: "The Stamp Book",
+    description: "Fan leaves Duck in charge of his stamp book, especially his favourite Mount Fuji stamp. Duck has a parcel to post and no stamp. Hmm...",
+    thumbnail: "images/thumbs/the-stamp-book.jpg",
+    video: "videos/the-stamp-book.mp4",
+    watchUrl: "",
+    views: null, date: "2026-11-06", duration: "0:51",
+    tags: ["fan", "duck"], milestone: "Polished"
   }
 ];
 
@@ -347,6 +357,14 @@ var FAN_IDEAS = [
    7. RELEASES   (the "What's new" list - newest first)
    --------------------------------------------------------------------- */
 var RELEASES = [
+  { version: "3.2", date: "6 Nov 2026", title: "The Polished Generation begins",
+    items: [
+      "From Short #16 onwards, every new video gets polished first, and only then published",
+      "Polish means richer colour, clearer sound and extra finishing touches",
+      "Polished Shorts now wear a Polished badge in the gallery"
+    ] },
+  { version: "3.1", date: "6 Nov 2026", title: "Short #16: The Stamp Book",
+    items: ["Short #16 is up: The Stamp Book. The book was looked after. The stamp was not."] },
   { version: "3.0", date: "4 Nov 2026", title: "The cereal box redesign",
     items: [
       "Whole new look: milk-white and bright yellow, with cereal rings in the background",
@@ -383,6 +401,9 @@ var RELEASES = [
    8. TICKER   (the scrolling headlines - add or remove any line)
    --------------------------------------------------------------------- */
 var TICKER = [
+  "The Polished Generation has begun: every new Short gets polished first, then published",
+  "Short #16: Fan's favourite Mount Fuji stamp is now on a parcel",
+  "Short #16: Duck was asked to take care of the stamp book. Duck says it was taken care of",
   "Short #15: the duck is now CEO. Sales are skyrocketing",
   "Short #15: he just wanted to go to a store",
   "Short #14: the tomato climbed a mountain so the duck could judge it",

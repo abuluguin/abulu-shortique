@@ -193,6 +193,11 @@ main { overflow-x: clip; } /* keeps the tilted ticker from widening the page on 
 .section.alt::before { top: -21px; background-image: radial-gradient(circle at 22px 22px, var(--band, var(--sky)) 21.5px, transparent 22px); }
 .section.alt::after { bottom: -21px; background-image: radial-gradient(circle at 22px 0, var(--band, var(--sky)) 21.5px, transparent 22px); }
 
+.notice { display: flex; align-items: center; gap: 20px; margin-bottom: 30px; background: var(--paper); }
+.notice p { font-weight: 500; }
+.notice-title { font-family: var(--display, inherit); font-size: 1.7rem; font-weight: 400; line-height: 1.1; color: var(--tomato); margin-bottom: 6px; }
+.notice .notice-mark { flex: none; padding: 8px 14px; border: 4px double var(--tomato); border-radius: 8px; color: var(--tomato); font-weight: 800; letter-spacing: .08em; text-transform: uppercase; white-space: nowrap; rotate: -6deg; }
+@media (max-width: 560px) { .notice { flex-direction: column; align-items: flex-start; gap: 12px; } }
 .eyebrow { display: inline-block; margin-bottom: 12px; padding: 5px 12px; border-radius: 8px; background: var(--ink); color: var(--yolk); font-size: .78rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; rotate: -2deg; }
 .h2 { font-family: var(--display); font-weight: 400; font-size: clamp(3.2rem, 12vw, 5.6rem); line-height: .95; letter-spacing: .02em; margin-bottom: 12px; text-shadow: .045em .045em 0 var(--yolk); }
 .section.alt .h2 { text-shadow: .045em .045em 0 var(--paper); }
