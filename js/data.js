@@ -268,6 +268,16 @@ var SHORTS = [
     watchUrl: "",
     views: null, date: "2026-11-06", duration: "0:51",
     tags: ["fan", "duck"], milestone: "Polished"
+  },
+  {
+    id: "the-toothpaste-debate",
+    title: "The Toothpaste Debate",
+    description: "Wet the toothbrush first, or put the toothpaste on first? Fan and his friend cannot agree. Then a third friend walks in with a plan, and it makes the news.",
+    thumbnail: "images/thumbs/the-toothpaste-debate.jpg",
+    video: "videos/the-toothpaste-debate.mp4",
+    watchUrl: "",
+    views: null, date: "2026-11-15", duration: "0:57",
+    tags: ["fan"], milestone: "Polished"
   }
 ];
 
@@ -357,6 +367,8 @@ var FAN_IDEAS = [
    7. RELEASES   (the "What's new" list - newest first)
    --------------------------------------------------------------------- */
 var RELEASES = [
+  { version: "3.3", date: "15 Nov 2026", title: "Short #17: The Toothpaste Debate",
+    items: ["Short #17 is up: The Toothpaste Debate. Wet it first or toothpaste first? The answer brought world peace."] },
   { version: "3.2", date: "6 Nov 2026", title: "The Polished Generation begins",
     items: [
       "From Short #16 onwards, every new video gets polished first, and only then published",
@@ -401,6 +413,8 @@ var RELEASES = [
    8. TICKER   (the scrolling headlines - add or remove any line)
    --------------------------------------------------------------------- */
 var TICKER = [
+  "Short #17: wet it first or toothpaste first? The bathroom is divided",
+  "Short #17: a third opinion has been heard. World peace has been achieved",
   "The Polished Generation has begun: every new Short gets polished first, then published",
   "Short #16: Fan's favourite Mount Fuji stamp is now on a parcel",
   "Short #16: Duck was asked to take care of the stamp book. Duck says it was taken care of",
