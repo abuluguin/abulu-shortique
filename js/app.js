@@ -367,17 +367,25 @@
     var inbox = SITE.ideaInbox || {};
     var btns = $('#ideaButtons'), note = $('#ideaNote');
     var hasRepo = inbox.githubRepo && inbox.githubRepo.indexOf('/') > 0;
+    var hasWa = waNumber().length >= 8;
 
-    if (hasRepo) btns.appendChild(h('button', { class: 'btn btn-primary', type: 'button', text: 'Send via GitHub', onclick: function () { sendIdea('github'); } }));
-    if (inbox.email) btns.appendChild(h('button', { class: hasRepo ? 'btn btn-ghost' : 'btn btn-primary', type: 'button', text: 'Send by email', onclick: function () { sendIdea('email'); } }));
-    if (!hasRepo && !inbox.email) {
+    if (hasWa) btns.appendChild(h('button', { class: 'btn btn-wa', type: 'button', text: 'Send on WhatsApp', onclick: function () { sendIdea('whatsapp'); } }));
+    if (hasRepo) btns.appendChild(h('button', { class: hasWa ? 'btn btn-ghost' : 'btn btn-primary', type: 'button', text: 'Send via GitHub', onclick: function () { sendIdea('github'); } }));
+    if (inbox.email) btns.appendChild(h('button', { class: (hasWa || hasRepo) ? 'btn btn-ghost' : 'btn btn-primary', type: 'button', text: 'Send by email', onclick: function () { sendIdea('email'); } }));
+    if (!hasWa && !hasRepo && !inbox.email) {
       btns.appendChild(h('button', { class: 'btn btn-primary', type: 'button', text: 'Copy my idea', onclick: function () { sendIdea('copy'); } }));
       var fl = firstSocial();
       note.textContent = 'Copy your idea and paste it in a comment' + (fl ? ' on our ' + fl.label + ' channel' : ' on our latest Short') + '. We read them all.';
+    } else if (hasWa) {
+      note.textContent = 'Tap Send on WhatsApp and your idea opens in WhatsApp, already typed. Just press send. Nothing is stored on this website.';
     } else {
       note.textContent = 'Your idea opens ready to send. Nothing is stored on this website.';
     }
     $('#ideaForm').addEventListener('submit', function (e) { e.preventDefault(); });
+  }
+
+  function waNumber() {
+    return String((SITE.ideaInbox || {}).whatsapp || '').replace(/\D/g, '');
   }
 
   function sendIdea(how) {
@@ -386,7 +394,12 @@
     if (text.length < 5) { toast('Write your idea first 🙂'); $('#ideaText').focus(); return; }
     var inbox = SITE.ideaInbox || {};
     var body = 'Idea: ' + text + '\n\nFrom: ' + name;
-    if (how === 'github') {
+    if (how === 'whatsapp') {
+      var msg = 'Hi ABULU Shortique! 💡 I have an idea for a Short:\n\n' + text + '\n\nFrom: ' + name;
+      var url = 'https://wa.me/' + waNumber() + '?text=' + encodeURIComponent(msg);
+      var win = window.open(url, '_blank', 'noopener');
+      if (!win) window.location.href = url;
+    } else if (how === 'github') {
       window.open('https://github.com/' + inbox.githubRepo + '/issues/new?title=' + encodeURIComponent('Short idea: ' + text.slice(0, 60)) + '&body=' + encodeURIComponent(body), '_blank', 'noopener');
     } else if (how === 'email') {
       window.location.href = 'mailto:' + inbox.email + '?subject=' + encodeURIComponent('ABULU Shortique idea') + '&body=' + encodeURIComponent(body);

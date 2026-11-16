@@ -54,9 +54,12 @@ var SITE = {
   //   githubRepo: "your-username/abulu-shortique"  -> opens a pre-filled
   //               GitHub issue (visitor needs a free GitHub account)
   //   email:      "you@example.com"                -> opens their email app
+  //   whatsapp:   "60123456789"  -> opens WhatsApp with the idea already typed
+  //               (full number with country code, digits only, no + or spaces)
   ideaInbox: {
     githubRepo: "",
-    email: ""
+    email: "",
+    whatsapp: "60162241203"
   },
 
   // Optional: type a number here to force the follower count shown on the

@@ -112,6 +112,8 @@ h1, h2, h3, p { margin-top: 0; }
 .btn.sm:active { transform: translateY(4px); box-shadow: 0 0 0 var(--ink); }
 .btn-primary { background: var(--tomato); }
 .btn-gold { background: var(--yolk); }
+.btn-wa { background: #25d366; }
+.btn-wa:hover { background: #3ee07a; }
 .btn-ghost { background: var(--paper); }
 .btn-ghost:hover { background: var(--sky); }
 .btn-row { display: flex; flex-wrap: wrap; gap: 14px; }
