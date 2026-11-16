@@ -114,6 +114,8 @@ h1, h2, h3, p { margin-top: 0; }
 .btn-gold { background: var(--yolk); }
 .btn-wa { background: #25d366; }
 .btn-wa:hover { background: #3ee07a; }
+.share-row { margin-top: 12px; }
+.btn[hidden] { display: none; }
 .btn-ghost { background: var(--paper); }
 .btn-ghost:hover { background: var(--sky); }
 .btn-row { display: flex; flex-wrap: wrap; gap: 14px; }

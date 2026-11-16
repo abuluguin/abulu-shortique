@@ -287,9 +287,51 @@
     if (target) openShort(target.id);
   }
 
+  /* Sharing: every Short has its own link, e.g. .../#watch=the-stamp-book */
+  function shortLink(id) {
+    return location.origin + location.pathname + '#watch=' + encodeURIComponent(id);
+  }
+
+  function shareText(s) {
+    return 'Watch "' + s.title + '" from ABULU Shortique 😂🦆';
+  }
+
+  function copyText(t, okMsg) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(t).then(function () { toast(okMsg); }, function () { prompt('Copy this link:', t); });
+    } else {
+      prompt('Copy this link:', t);
+    }
+  }
+
+  function shareShort(how) {
+    var s = shortById(currentId);
+    if (!s) return;
+    var link = shortLink(s.id);
+    if (how === 'whatsapp') {
+      var url = 'https://wa.me/?text=' + encodeURIComponent(shareText(s) + '\n' + link);
+      var win = window.open(url, '_blank', 'noopener');
+      if (!win) window.location.href = url;
+    } else if (navigator.share) {
+      navigator.share({ title: s.title + ' · ABULU Shortique', text: shareText(s), url: link }).catch(function () { /* closed */ });
+    } else {
+      copyText(link, 'Link copied! Paste it anywhere 🔗');
+    }
+  }
+
+  function openFromLink() {
+    var m = /^#watch=([^&]+)/.exec(location.hash);
+    if (!m) return;
+    var id = decodeURIComponent(m[1]);
+    if (shortById(id)) openShort(id);
+  }
+
   function initModal() {
     modal = $('#modal');
     vid = $('#modalVideo');
+    $('#shareWa').addEventListener('click', function () { shareShort('whatsapp'); });
+    $('#shareMore').addEventListener('click', function () { shareShort('more'); });
+    if (!navigator.share) $('#shareMore').textContent = 'Copy link';
     $$('[data-close]', modal).forEach(function (n) { n.addEventListener('click', closeModal); });
     $('#prevShort').addEventListener('click', function () { stepShort(-1); });
     $('#nextShort').addEventListener('click', function () { stepShort(1); });
@@ -703,6 +745,7 @@
     initMenu();
     initSecrets();
     observeReveal();
+    openFromLink();
 
     var rt;
     window.addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(drawChart, 150); });
